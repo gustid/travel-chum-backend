@@ -1,5 +1,5 @@
 const corsOptions = {
-  origin: "https://localhost:8081"
+  origin: "*"
 };
 
 export default corsOptions;

@@ -1,14 +1,8 @@
 import express from "express";
-import {
-  createUser,
-  getUser,
-  updateUser,
-  deleteUser
-} from "./../controllers/userController";
+import { signUp } from "./../controllers/authController";
 
 const userRouter = express.Router();
 
-userRouter.route("/").post(createUser);
-userRouter.route("/:id").get(getUser).patch(updateUser).delete(deleteUser);
+userRouter.route("/signup").post(signUp);
 
 export default userRouter;
